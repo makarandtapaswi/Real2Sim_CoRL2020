@@ -1,0 +1,1 @@
+Each row in these files specifies a sampled collision-free state that is used for benchmarking. 
