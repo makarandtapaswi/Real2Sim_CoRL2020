@@ -59,8 +59,24 @@ Example of visualization:
 ![](doc/policy_learning/visualize_states.gif) 
 
 ### Training the policy
+The following command will train policy for action id 86 (*pull left to right*) on states *1sA*.
+On standard 4 cores laptop without gpu it takes about 3 hours to finish. 
+You can track learning progress in tensorboard.
+
+```shell script
+# add -cuda_id 0 if you have cuda installed
+python policy_learning/manipulation_learning.py -log_dir data/policies -name exp_1sA_act_86 --linear_lr -states_folder data/states/1sA -angle_bound_scale 0.01 --without_object_obs -seed 0
+```
+See folder *policy_learning/scripts/* for a collection of bash scripts we used for training policies which performance was reported in the paper.
+These bash scripts just call *manipulation_learning.py* script with different parameters to train policies e.g. with different domain randomization or on different states.
 
 ### Visualization of trained policy
+
+You can either download learned polices from here TODO. Or use policy trained in the previous step.
+In case of downloaded policies, just adjust experiment name.
+```shell script
+python policy_learning/manipulation_learning.py -log_dir data/policies -name exp_1sA_act_86 -states_folder data/states/1sA --without_object_obs --greedy_eval --render --realtime
+```
 
 
 ## Benchmarking
