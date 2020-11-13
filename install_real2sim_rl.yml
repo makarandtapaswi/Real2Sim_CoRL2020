@@ -1,0 +1,26 @@
+name: real2sim_rl
+channels:
+  - pytorch
+dependencies:
+  - python=3.7
+  - pytorch-cpu=1.2
+  - numpy
+  - psutil
+  - opencv  # atari.
+  - pip
+  - pip:
+      - atari-py
+      - pyprind  # progbar.
+      - matplotlib
+      - vg
+      - tensorboard
+      - future
+      - matplotlib
+      - pandas
+      - PyQt5
+      - scipy
+      - "git+https://git@github.com/astooke/rlpyt@master#egg=rlpyt"
+      - "git+https://git@github.com/petrikvladimir/pyphysx.git@0bc12d077fd08861e356d039529967661761aab0#egg=pyphysx"
+      - "git+https://git@github.com/petrikvladimir/rlpyt_utils.git@9d1345a46f7eeb38aae0c75e05d957c4f7651074#egg=rlpyt_utils"
+
+
