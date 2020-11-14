@@ -78,6 +78,7 @@ In case of downloaded policies, just adjust experiment name.
 python policy_learning/manipulation_learning.py -log_dir data/policies -name exp_1sA_act_86 -states_folder data/states/1sA --without_object_obs --greedy_eval --render --realtime
 ```
 You should see:
+
 ![](doc/policy_learning/learned_policy.gif) 
 
 
