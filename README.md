@@ -84,7 +84,21 @@ You should see:
 
 ## Benchmarking
 For benchmarking, install and activate conda environment from RL section:
-```
+```shell script
 conda activate real2sim_rl
 ``` 
+Benchmarking of policies is divided into two steps: (i) extracting trajectories by applying policy in simulation and (ii) evaluating trajectories by our proposed metrics.
+To extract trajectories for trained policy do:
+```shell script
+python benchmarking/extract_benchmark_trajectories.py data/benchmark_specification/benchmark_easy.csv data/benchmark/exp_1sA_act_86 -log_dir data/policies -name exp_1sA_act_86 --without_object_obs
+```
+You will see progress bar that indicate evaluation of 1000 samples from easy benchmark specification.
+Trajectories are stored in csv files in *benchmark/exp_1sA_act_86*.
 
+These trajectories are then analysed in the second step by invoking command:
+```shell script
+python benchmarking/trajectories_analysis.py data/benchmark_specification/benchmark_easy.csv data/benchmark/exp_1sA_act_86
+```
+Besides success rate stored in *data/benchmark/performance.txt*, the script generates two plots useful for analysis, showing the marginal success rate histogram:
+
+![](doc/policy_learning/success_marginal_exp_1sA_act_86.png) 
