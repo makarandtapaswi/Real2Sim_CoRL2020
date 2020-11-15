@@ -72,8 +72,7 @@ These bash scripts just call *manipulation_learning.py* script with different pa
 
 ### Visualization of trained policy
 
-You can either download learned polices from here TODO. Or use policy trained in the previous step.
-In case of downloaded policies, just adjust experiment name.
+Use policy trained in the previous step.
 ```shell script
 python policy_learning/manipulation_learning.py -log_dir data/policies -name exp_1sA_act_86 -states_folder data/states/1sA --without_object_obs --greedy_eval --render --realtime
 ```
