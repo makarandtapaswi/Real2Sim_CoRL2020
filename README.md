@@ -10,16 +10,16 @@ Additional data:
 [arXiv](https://arxiv.org/abs/2011.06813),
 [Project page](https://data.ciirc.cvut.cz/public/projects/2020Real2Sim/), 
 [YouTube overview video](https://youtu.be/0bhO3KCKVa8), 
-[Paper PDF](https://drive.google.com/file/d/1DuHan9oZXznDnXiCP7J6ogWn8FMAAkIJ/view),
-[arXiv](https://arxiv.org/abs/2011.06813).
+[Paper PDF](https://drive.google.com/file/d/1DuHan9oZXznDnXiCP7J6ogWn8FMAAkIJ/view)
 
 Citation:
 ```bibtex
-@inproceedings{
+@inproceedings{petrik2020real2sim,
 author = {Vladimir Petrik and Makarand Tapaswi and Ivan Laptev and Josef Sivic},
 title = {{Learning Object Manipulation Skills via Approximate State Estimation from Real Videos}},
 booktitle = {Conference on Robot Learning (CoRL)},
 year = {2020}
+}
 ```
 
 # Code
@@ -43,7 +43,7 @@ Video and action ids are indicated in the code repositories.
 - `labels`: contains ground-truth annotations for action phase and [Something-Else annotations](https://github.com/joaanna/something_else)
 - `preprocessing`: contains scripts that parse the video to create binary hand and object segmentation masks
 - `real2sim`: contains classes and scripts for performing Real2Sim coarse state estimation via optimization
-- `real2sim/sthsth`: contains some pre-processed data for running Real2Sim estimation (extract [this tarball](https://drive.google.com/file/d/1Dy8GXQF6wqDKj_vhp5nE1uOB2T5fm0Bu/view) in this folder)
+- `real2sim/sthsth`: contains some pre-processed data for running Real2Sim estimation
 
 ### Installation
 - pytorch 1.2 + cuda9.2
@@ -55,10 +55,13 @@ Video and action ids are indicated in the code repositories.
 
 ### Required data
 
-TBD: link to extracted segmentation masks, 
 We also share video segmentation masks required as part of the perceptual losses from the neural renderer (results can be replicated without original videos).
+Extract [this tarball](https://drive.google.com/file/d/1Dy8GXQF6wqDKj_vhp5nE1uOB2T5fm0Bu/view) in the `real2sim/sthsth` folder.
 
 ### Optimization
+
+Please look at `real2sim/final_scripts.sh` for a list of commands to replicate our state estimation results.
+
 
 ## Reinforcement learning of control policies
 
