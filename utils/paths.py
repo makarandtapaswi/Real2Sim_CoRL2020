@@ -1,13 +1,13 @@
 # Just a declaration of all base paths in one place
 import os
+import pathlib
 
-CODE_ROOT = 'src/Real2Sim_CoRL2020/'
+#CODE_ROOT = # path-to-github-repo: 'Real2Sim_CoRL2020/'
+CODE_ROOT = str(pathlib.Path().absolute()).rsplit('/', 1)[0]
 
 # Something-Something dataset
-DATA_ROOT = '../data/something_something_v2/'
-
-# Labels
-CHOSEN_VIDEOS_TEMPLATE = os.path.join(CODE_ROOT, 'labels', 'chosen_vids', '%d.videos')
+#DATA_ROOT = # path-to-dataset-store: 'Real2Sim_CoRL2020/datapack/'
+DATA_ROOT = os.path.join(CODE_ROOT, 'sthsth')
 
 # Video filename templates
 VIDEO_FNAME_TEMPLATE = os.path.join(DATA_ROOT, 'data', 'videos', '%d.webm')
