@@ -28,11 +28,22 @@ To simplify the experimentation, we provide you computed data for each step, so 
 
 ## Estimating states from video 
 
+We use 6 videos each for 9 actions from the [Something-Something-v2 dataset](https://20bn.com/datasets/something-something).
+Please download the data from the original link above.
+Video and action ids are indicated in the code repositories.
+
+### Structure
+- `utils`: contains some utility functions
+- `labels`: contains ground-truth annotations for action phase and [Something-Else annotations](https://github.com/joaanna/something_else)
+- `preprocessing`: contains scripts that parse the video to create binary hand and object segmentation masks
+- `real2sim`: contains classes and scripts for performing Real2Sim coarse state estimation via optimization
+
 ### Installation
 
 ### Required data
 
 TBD: link to extracted segmentation masks, 
+We also share video segmentation masks required as part of the perceptual losses from the neural renderer (results can be replicated without original videos).
 
 ### Optimization
 
