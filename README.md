@@ -10,7 +10,8 @@ Additional data:
 [arXiv](https://arxiv.org/abs/2011.06813),
 [Project page](https://data.ciirc.cvut.cz/public/projects/2020Real2Sim/), 
 [YouTube overview video](https://youtu.be/0bhO3KCKVa8), 
-[Paper PDF](https://drive.google.com/file/d/1DuHan9oZXznDnXiCP7J6ogWn8FMAAkIJ/view).
+[Paper PDF](https://drive.google.com/file/d/1DuHan9oZXznDnXiCP7J6ogWn8FMAAkIJ/view),
+[arXiv](https://arxiv.org/abs/2011.06813).
 
 Citation:
 ```bibtex
