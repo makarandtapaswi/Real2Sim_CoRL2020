@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>Real2Sim Debug-GIFs</title>
+    <meta http-equiv="Pragma" content="no-cache">
+</head>
+<body>
+
+<h1>Arguments</h1>
+<table>
+{% for key, value in args.items() %}
+<tr>
+<td>{{ key }}</td><td>{{ value }}</td>
+</tr>
+{% endfor %}
+</table>
+
+
+<h1>Results</h1>
+<table>
+<tr>
+<td>Input Video</td>
+<td><img src="../gt/{{ video_id }}/gt_vid.gif" width="300" /></td>
+</tr>
+
+<tr>
+<td>GT</td>
+<td><img src="../gt/{{ video_id }}/gt_om.gif" width="300" /></td>
+<td><img src="../gt/{{ video_id }}/gt_hm.gif" width="300" /></td>
+<td><img src="../gt/{{ video_id }}/gt_ohm.gif" width="300" /></td>
+</tr>
+
+<tr>
+<td>Last iteration</td>
+<td><img src="o_mask.gif" width="300" /></td>
+<td><img src="h_mask.gif" width="300" /></td>
+<td><img src="oh_mask.gif" width="300" /></td>
+</tr>
+
+{% for n in range(40) %}
+<tr>
+<td>Iteration {{ 10 * loop.index }}</td>
+<td><img src="o{{ 10 * loop.index }}_mask.gif" width="300" /></td>
+<td><img src="h{{ 10 * loop.index }}_mask.gif" width="300" /></td>
+<td><img src="oh{{ 10 * loop.index }}_mask.gif" width="300" /></td>
+</tr>
+{% endfor %}
+
+</body>
+</html>
+
