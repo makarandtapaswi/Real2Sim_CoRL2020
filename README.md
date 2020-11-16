@@ -7,13 +7,18 @@ This repository contains code for the CoRL 2020 submission titled **Learning Obj
 In case of any question contact us at *vladimir.petrik@cvut.cz* or *makarand.tapaswi@inria.fr*.
 
 Additional data:
-[Supplementary materials](https://data.ciirc.cvut.cz/public/projects/2020Real2Sim/), 
+[arXiv](https://arxiv.org/abs/2011.06813),
+[Project page](https://data.ciirc.cvut.cz/public/projects/2020Real2Sim/), 
 [YouTube overview video](https://youtu.be/0bhO3KCKVa8), 
 [Paper PDF](https://drive.google.com/file/d/1DuHan9oZXznDnXiCP7J6ogWn8FMAAkIJ/view).
 
 Citation:
 ```bibtex
-TBD.
+@inproceedings{
+author = {Vladimir Petrik and Makarand Tapaswi and Ivan Laptev and Josef Sivic},
+title = {{Learning Object Manipulation Skills via Approximate State Estimation from Real Videos}},
+booktitle = {Conference on Robot Learning (CoRL)},
+year = {2020}
 ```
 
 # Code
@@ -37,8 +42,15 @@ Video and action ids are indicated in the code repositories.
 - `labels`: contains ground-truth annotations for action phase and [Something-Else annotations](https://github.com/joaanna/something_else)
 - `preprocessing`: contains scripts that parse the video to create binary hand and object segmentation masks
 - `real2sim`: contains classes and scripts for performing Real2Sim coarse state estimation via optimization
+- `real2sim/sthsth`: contains some pre-processed data for running Real2Sim estimation (extract [this tarball](https://drive.google.com/file/d/1Dy8GXQF6wqDKj_vhp5nE1uOB2T5fm0Bu/view) in this folder)
 
 ### Installation
+- pytorch 1.2 + cuda9.2
+- [neural-renderer](https://github.com/hiroharu-kato/neural_renderer)
+- trimesh
+- jinja2 (for automatic visualization of generated states)
+- opencv, imageio
+- Please follow instructions in the README for preprocessing (segmask computation / hand-object detector / tracking)
 
 ### Required data
 
