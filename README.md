@@ -1,6 +1,3 @@
-```diff
-@@ Warning: The code in this repository is under construction. For the best exprience, please, try it later (in few days). @@
-```
 
 # About
 This repository contains code for the CoRL 2020 submission titled **Learning Object Manipulation Skills via Approximate State Estimation from Real Videos**.
@@ -74,7 +71,7 @@ export PYTHONPATH="${PYTHONPATH}:`pwd`"  #run in the repo root
 ```
 
 ### Required data
-Either run states estimation from the previous section, or download and extract states from TBD into the folder *data/states/*.
+Either run states estimation from the previous section, or download and extract states from [here](https://data.ciirc.cvut.cz/public/projects/2020Real2Sim/states.zip) into the folder *data/states/*.
 Once this is done, you can visualize states using:
 ```shell script
 python simulation/scripts/visualize_states.py data/states/1sA
