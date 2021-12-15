@@ -44,7 +44,7 @@ Video and action ids are indicated in the code repositories.
 
 ### Installation
 - pytorch 1.2 + cuda9.2
-- [neural-renderer](https://github.com/hiroharu-kato/neural_renderer)
+- [neural-renderer](https://github.com/daniilidis-group/neural_renderer)
 - trimesh
 - jinja2 (for automatic visualization of generated states)
 - opencv, imageio
